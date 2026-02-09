@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-label="Airbnb" role="img" focusable="false">
+                    <path d="M16 1c2.008 0 3.463.963 4.751 3.269l.533 1.025c1.954 3.83 6.114 12.54 7.1 14.836l.145.353c.667 1.591.91 2.472.96 3.396l.01.415.001.228c0 4.062-2.877 6.478-6.357 6.478-2.224 0-4.556-1.258-6.709-3.386l-.257-.26-.172-.179h-.001l-.946-.99-1.088 1.139-.946.989a16.46 16.46 0 0 1-.256.259c-2.153 2.128-4.486 3.386-6.71 3.386C2.876 31 0 28.584 0 24.522l.002-.228.009-.415c.05-.924.294-1.805.96-3.396l.145-.353c.986-2.296 5.146-11.006 7.1-14.836l.533-1.025C10.537 1.963 11.992 1 14 1h2zm0 2h-2c-1.097 0-2.002.539-3.048 2.43l-.511.994c-1.85 3.637-6.005 12.335-6.945 14.526l-.135.33c-.574 1.37-.784 2.09-.827 2.869l-.007.298.001.151c0 2.86 1.93 4.402 4.329 4.402 1.556 0 3.373-.879 5.185-2.554l.274-.26.493-.49 1.69-1.754 1.69 1.753.493.491.274.26c1.812 1.675 3.629 2.554 5.185 2.554 2.4 0 4.329-1.543 4.329-4.402l.001-.15-.007-.3c-.043-.778-.253-1.498-.827-2.868l-.135-.33c-.94-2.191-5.095-10.889-6.945-14.526l-.511-.994C20.002 3.539 19.097 3 18 3h-2z" fill="currentColor"/>
+                </svg>
+                <span>airbnb</span>
+            </a>
+
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <a href="#" class="nav-item active">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 2a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4zM12 18H8v4a2 2 0 0 0 1.85 1.995L10 24h2zm10 0h-8v6h8zm6 0h-4v6h2a2 2 0 0 0 1.995-1.85L28 22zM12 10H8v6h4zm10 0h-8v6h8zm6 0h-4v6h4zM10 4H8a2 2 0 0 0-1.995 1.85L6 6v2h6V4zm12 0h-8v4h8zM26 4h-2v4h4V6a2 2 0 0 0-1.85-1.995z" fill="currentColor"/>
+                    </svg>
+                    <span>Alojamientos</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="badge">NUEVO</span>
+                    <div class="nav-icon-balloon">🎈</div>
+                    <span>Experiencias</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="badge">NUEVO</span>
+                    <div class="nav-icon-services">🏕️</div>
+                    <span>Servicios</span>
+                </a>
+            </nav>
+
+            <!-- Right section -->
+            <div class="header-right">
+                <a href="#" class="become-host">Conviértete en anfitrión</a>
+                <button class="globe-btn">
+                    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 .25a7.77 7.77 0 0 1 7.75 7.78 7.75 7.75 0 0 1-7.52 7.72h-.25A7.75 7.75 0 0 1 .25 8.24v-.25A7.75 7.75 0 0 1 8 .25zm1.95 8.5h-3.9c.15 2.9 1.17 5.34 1.88 5.5H8c.68 0 1.72-2.37 1.93-5.23zm4.26 0h-2.76c-.09 1.96-.53 3.78-1.18 5.08A6.26 6.26 0 0 0 14.17 9zm-9.67 0H1.8a6.26 6.26 0 0 0 3.94 5.08 12.59 12.59 0 0 1-1.16-4.7l-.01-.38zm1.2-6.58-.12.05a6.26 6.26 0 0 0-3.83 5.03h2.75c.09-1.83.48-3.54 1.06-4.81zm2.25-.42c-.7 0-1.78 2.51-1.94 5.5h3.9c-.15-2.9-1.18-5.34-1.89-5.5h-.07zm2.28.43.03.05a12.95 12.95 0 0 1 1.15 5.02h2.75a6.28 6.28 0 0 0-3.93-5.07z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-btn">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="menu-icon">
+                        <path d="M4 7h24M4 16h24M4 25h24" fill="none" stroke="currentColor" stroke-width="3"/>
+                    </svg>
+                    <div class="user-avatar">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 .7C7.56.7.7 7.56.7 16S7.56 31.3 16 31.3 31.3 24.44 31.3 16 24.44.7 16 .7zm0 28c-4.02 0-7.6-1.88-9.93-4.81a12.43 12.43 0 0 1 6.45-4.4A6.5 6.5 0 0 1 9.5 14a6.5 6.5 0 0 1 13 0 6.51 6.51 0 0 1-3.02 5.5 12.42 12.42 0 0 1 6.45 4.4A12.67 12.67 0 0 1 16 28.7z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <div class="search-section destination">
+                <label>Destino</label>
+                <input type="text" placeholder="Buscar destinos">
+            </div>
+            <div class="search-divider"></div>
+            <div class="search-section dates">
+                <label>Fechas</label>
+                <span class="placeholder-text">Agregar fechas</span>
+            </div>
+            <div class="search-divider"></div>
+            <div class="search-section guests">
+                <label>Huéspedes</label>
+                <span class="placeholder-text">¿Cuántos?</span>
+            </div>
+            <button class="search-btn">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 0a13 13 0 0 1 10.5 20.67l7.91 7.92-2.82 2.82-7.92-7.91A13 13 0 1 1 13 0zm0 4a9 9 0 1 0 0 18 9 9 0 0 0 0-18z" fill="currentColor"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Primera sección de alojamientos -->
+        <section class="listings-section">
+            <div class="section-header">
+                <h2>Alojamientos populares en Ciudad de México</h2>
+                <a href="#" class="see-all">→</a>
+            </div>
+            <div class="carousel-nav">
+                <button class="carousel-btn prev" disabled>
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 28L8 16 20 4" fill="none" stroke="currentColor" stroke-width="3"/>
+                    </svg>
+                </button>
+                <button class="carousel-btn next">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4l12 12-12 12" fill="none" stroke="currentColor" stroke-width="3"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="listings-grid">
+                <!-- Card 1 -->
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=300&fit=crop" alt="Departamento en Juárez">
+                        <span class="guest-favorite">Favorito entre huéspedes</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Departamento en Juárez</h3>
+                        <p class="dates">15–17 de may</p>
+                        <p class="price"><strong>$2,201 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.86</p>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=300&fit=crop" alt="Departamento en Juárez">
+                        <span class="guest-favorite">Favorito entre huéspedes</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Departamento en Juárez</h3>
+                        <p class="dates">22–24 de may</p>
+                        <p class="price"><strong>$2,257 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.82</p>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop" alt="Habitación en CDMX">
+                        <span class="guest-favorite">Favorito entre huéspedes</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Habitación en Ciudad de México</h3>
+                        <p class="dates">6–8 de mar</p>
+                        <p class="price"><strong>$1,031 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.87</p>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=400&h=300&fit=crop" alt="Loft en CDMX">
+                        <span class="guest-favorite">Favorito entre huéspedes</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Loft en Ciudad de México</h3>
+                        <p class="dates">8–10 de may</p>
+                        <p class="price"><strong>$1,619 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.87</p>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=400&h=300&fit=crop" alt="Habitación en CDMX">
+                        <span class="guest-favorite">Favorito entre huéspedes</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Habitación en Ciudad de México</h3>
+                        <p class="dates">10–12 de abr</p>
+                        <p class="price"><strong>$715 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 5.0</p>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=400&h=300&fit=crop" alt="Loft en CDMX">
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Loft en Ciudad de México</h3>
+                        <p class="dates">6–8 de mar</p>
+                        <p class="price"><strong>$1,635 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.79</p>
+                    </div>
+                </article>
+
+                <!-- Card 7 -->
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop" alt="Lugar en CDMX">
+                        <span class="guest-favorite">Favorito entre huéspedes</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Lugar para hospedarte en CDMX</h3>
+                        <p class="dates">3–5 de abr</p>
+                        <p class="price"><strong>$832 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.89</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Segunda sección - Mazamitla -->
+        <section class="listings-section">
+            <div class="section-header">
+                <h2>Disponibles en Mazamitla este fin de semana</h2>
+                <a href="#" class="see-all">→</a>
+            </div>
+            <div class="carousel-nav">
+                <button class="carousel-btn prev" disabled>
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 28L8 16 20 4" fill="none" stroke="currentColor" stroke-width="3"/>
+                    </svg>
+                </button>
+                <button class="carousel-btn next">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4l12 12-12 12" fill="none" stroke="currentColor" stroke-width="3"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="listings-grid">
+                <!-- Row 2 Cards -->
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=400&h=300&fit=crop" alt="Cabaña en Mazamitla">
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Cabaña en Mazamitla</h3>
+                        <p class="dates">14–16 de feb</p>
+                        <p class="price"><strong>$3,450 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.92</p>
+                    </div>
+                </article>
+
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=400&h=300&fit=crop" alt="Cabaña en Mazamitla">
+                        <span class="guest-favorite">Favorito entre huéspedes</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Cabaña en Mazamitla</h3>
+                        <p class="dates">21–23 de feb</p>
+                        <p class="price"><strong>$2,890 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.95</p>
+                    </div>
+                </article>
+
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=400&h=300&fit=crop" alt="Casa en Mazamitla">
+                        <span class="guest-favorite">Favorito entre huéspedes</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Casa en Mazamitla</h3>
+                        <p class="dates">14–16 de feb</p>
+                        <p class="price"><strong>$4,200 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.88</p>
+                    </div>
+                </article>
+
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=400&h=300&fit=crop" alt="Cabaña en Mazamitla">
+                        <span class="guest-favorite">Favorito entre huéspedes</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Cabaña en Mazamitla</h3>
+                        <p class="dates">7–9 de mar</p>
+                        <p class="price"><strong>$2,150 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.91</p>
+                    </div>
+                </article>
+
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&h=300&fit=crop" alt="Casa en Mazamitla">
+                        <span class="guest-favorite">Favorito entre huéspedes</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Casa en Mazamitla</h3>
+                        <p class="dates">28 feb–2 mar</p>
+                        <p class="price"><strong>$3,800 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.97</p>
+                    </div>
+                </article>
+
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?w=400&h=300&fit=crop" alt="Cabaña en Mazamitla">
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Cabaña en Mazamitla</h3>
+                        <p class="dates">14–16 de feb</p>
+                        <p class="price"><strong>$1,950 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.85</p>
+                    </div>
+                </article>
+
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=400&h=300&fit=crop" alt="Cabaña en Mazamitla">
+                        <span class="guest-favorite">Favorito entre huéspedes</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Cabaña en Mazamitla</h3>
+                        <p class="dates">21–23 de feb</p>
+                        <p class="price"><strong>$2,650 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.93</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Tercera sección - Inspiración -->
+        <section class="listings-section">
+            <div class="section-header">
+                <h2>Escapadas cerca de ti</h2>
+                <a href="#" class="see-all">→</a>
+            </div>
+            <div class="carousel-nav">
+                <button class="carousel-btn prev" disabled>
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 28L8 16 20 4" fill="none" stroke="currentColor" stroke-width="3"/>
+                    </svg>
+                </button>
+                <button class="carousel-btn next">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4l12 12-12 12" fill="none" stroke="currentColor" stroke-width="3"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="listings-grid">
+                <!-- Row 3 Cards -->
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=300&fit=crop" alt="Hotel en Guadalajara">
+                        <span class="guest-favorite">Favorito entre huéspedes</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Hotel en Guadalajara</h3>
+                        <p class="dates">A 4 horas</p>
+                        <p class="price"><strong>$1,890 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.94</p>
+                    </div>
+                </article>
+
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop" alt="Casa en Sayulita">
+                        <span class="guest-favorite">Favorito entre huéspedes</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Casa en Sayulita</h3>
+                        <p class="dates">A 1 hora</p>
+                        <p class="price"><strong>$2,450 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.89</p>
+                    </div>
+                </article>
+
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&h=300&fit=crop" alt="Villa en Punta Mita">
+                        <span class="guest-favorite">Favorito entre huéspedes</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Villa en Punta Mita</h3>
+                        <p class="dates">A 45 min</p>
+                        <p class="price"><strong>$5,200 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.96</p>
+                    </div>
+                </article>
+
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&h=300&fit=crop" alt="Departamento en Tepic">
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Departamento en Tepic</h3>
+                        <p class="dates">A 2 horas</p>
+                        <p class="price"><strong>$980 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.78</p>
+                    </div>
+                </article>
+
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=400&h=300&fit=crop" alt="Casa en San Pancho">
+                        <span class="guest-favorite">Favorito entre huéspedes</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Casa en San Pancho</h3>
+                        <p class="dates">A 30 min</p>
+                        <p class="price"><strong>$2,100 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.91</p>
+                    </div>
+                </article>
+
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&h=300&fit=crop" alt="Hotel en Compostela">
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Hotel en Compostela</h3>
+                        <p class="dates">A 1.5 horas</p>
+                        <p class="price"><strong>$1,350 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.82</p>
+                    </div>
+                </article>
+
+                <article class="listing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=400&h=300&fit=crop" alt="Villa en Lo de Marcos">
+                        <span class="guest-favorite">Favorito entre huéspedes</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Villa en Lo de Marcos</h3>
+                        <p class="dates">A 25 min</p>
+                        <p class="price"><strong>$3,100 MXN</strong> por 2 noches</p>
+                        <p class="rating">★ 4.98</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Inspiración Section -->
+        <section class="inspiration-section">
+            <h2>Inspiración para futuras escapadas</h2>
+            <div class="inspiration-tabs">
+                <button class="tab active">Populares</button>
+                <button class="tab">Arte y cultura</button>
+                <button class="tab">Playa</button>
+                <button class="tab">Montañas</button>
+                <button class="tab">Al aire libre</button>
+                <button class="tab">Actividades</button>
+            </div>
+            <div class="inspiration-grid">
+                <a href="#" class="inspiration-item">
+                    <span class="city">Tokio</span>
+                    <span class="type">Condominios</span>
+                </a>
+                <a href="#" class="inspiration-item">
+                    <span class="city">Dallas</span>
+                    <span class="type">Casas en renta</span>
+                </a>
+                <a href="#" class="inspiration-item">
+                    <span class="city">San Juan</span>
+                    <span class="type">Cabañas</span>
+                </a>
+                <a href="#" class="inspiration-item">
+                    <span class="city">Barcelona</span>
+                    <span class="type">Alquileres vacacionales</span>
+                </a>
+                <a href="#" class="inspiration-item">
+                    <span class="city">Kauai</span>
+                    <span class="type">Casas en renta</span>
+                </a>
+                <a href="#" class="inspiration-item">
+                    <span class="city">Galveston</span>
+                    <span class="type">Alojamientos para estancias larga</span>
+                </a>
+                <a href="#" class="inspiration-item">
+                    <span class="city">Ámsterdam</span>
+                    <span class="type">Departamentos</span>
+                </a>
+                <a href="#" class="inspiration-item">
+                    <span class="city">Filadelfia</span>
+                    <span class="type">Departamentos</span>
+                </a>
+                <a href="#" class="inspiration-item">
+                    <span class="city">Orange Beach</span>
+                    <span class="type">Departamentos</span>
+                </a>
+                <a href="#" class="inspiration-item">
+                    <span class="city">Cleveland</span>
+                    <span class="type">Casas en renta</span>
+                </a>
+                <a href="#" class="inspiration-item">
+                    <span class="city">St. Petersburg</span>
+                    <span class="type">Villas</span>
+                </a>
+                <a href="#" class="inspiration-item">
+                    <span class="city">Oahu</span>
+                    <span class="type">Alojamientos para estancias larga</span>
+                </a>
+                <a href="#" class="inspiration-item">
+                    <span class="city">Montañas Pocono</span>
+                    <span class="type">Villas</span>
+                </a>
+                <a href="#" class="inspiration-item">
+                    <span class="city">Londres</span>
+                    <span class="type">Departamentos</span>
+                </a>
+                <a href="#" class="inspiration-item">
+                    <span class="city">Raleigh</span>
+                    <span class="type">Condominios</span>
+                </a>
+                <a href="#" class="inspiration-item">
+                    <span class="city">Portland</span>
+                    <span class="type">Cabañas</span>
+                </a>
+                <a href="#" class="inspiration-item">
+                    <span class="city">Mineápolis</span>
+                    <span class="type">Casas en renta</span>
+                </a>
+                <a href="#" class="inspiration-item show-more">
+                    <span class="city">Mostrar más</span>
+                    <span class="type">↓</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Asistencia</h4>
+                <ul>
+                    <li><a href="#">Centro de Ayuda</a></li>
+                    <li><a href="#">Obtén ayuda para resolver un problema de seguridad</a></li>
+                    <li><a href="#">AirCover</a></li>
+                    <li><a href="#">Antidiscriminación</a></li>
+                    <li><a href="#">Apoyo para discapacitados</a></li>
+                    <li><a href="#">Opciones de cancelación</a></li>
+                    <li><a href="#">Problemas en la zona</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Cómo ser anfitrión</h4>
+                <ul>
+                    <li><a href="#">Hazlo Airbnb</a></li>
+                    <li><a href="#">Ofrece tu experiencia en Airbnb</a></li>
+                    <li><a href="#">Ofrece tu servicio en Airbnb</a></li>
+                    <li><a href="#">AirCover para anfitriones</a></li>
+                    <li><a href="#">Recursos para hospedar</a></li>
+                    <li><a href="#">Foro de la comunidad</a></li>
+                    <li><a href="#">Ser un anfitrión responsable</a></li>
+                    <li><a href="#">Apúntate a una clase gratuita sobre cómo ser anfitrión</a></li>
+                    <li><a href="#">Busca un coanfitrión</a></li>
+                    <li><a href="#">Invita a un anfitrión</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Airbnb</h4>
+                <ul>
+                    <li><a href="#">Lanzamiento de verano 2025</a></li>
+                    <li><a href="#">Sala de prensa</a></li>
+                    <li><a href="#">Empleo</a></li>
+                    <li><a href="#">Inversores</a></li>
+                    <li><a href="#">Alojamientos Airbnb.org</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <span>© 2026 Airbnb, Inc.</span>
+                <span>·</span>
+                <a href="#">Privacidad</a>
+                <span>·</span>
+                <a href="#">Términos</a>
+                <span>·</span>
+                <a href="#">Información de la compañía</a>
+            </div>
+            <div class="footer-settings">
+                <button class="lang-btn">
+                    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 .25a7.77 7.77 0 0 1 7.75 7.78 7.75 7.75 0 0 1-7.52 7.72h-.25A7.75 7.75 0 0 1 .25 8.24v-.25A7.75 7.75 0 0 1 8 .25zm1.95 8.5h-3.9c.15 2.9 1.17 5.34 1.88 5.5H8c.68 0 1.72-2.37 1.93-5.23zm4.26 0h-2.76c-.09 1.96-.53 3.78-1.18 5.08A6.26 6.26 0 0 0 14.17 9zm-9.67 0H1.8a6.26 6.26 0 0 0 3.94 5.08 12.59 12.59 0 0 1-1.16-4.7l-.01-.38zm1.2-6.58-.12.05a6.26 6.26 0 0 0-3.83 5.03h2.75c.09-1.83.48-3.54 1.06-4.81zm2.25-.42c-.7 0-1.78 2.51-1.94 5.5h3.9c-.15-2.9-1.18-5.34-1.89-5.5h-.07zm2.28.43.03.05a12.95 12.95 0 0 1 1.15 5.02h2.75a6.28 6.28 0 0 0-3.93-5.07z" fill="currentColor"/>
+                    </svg>
+                    Español (MX)
+                </button>
+                <button class="currency-btn">$ MXN</button>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 0H2C.9 0 0 .9 0 2v28c0 1.1.9 2 2 2h15V20h-4v-5h4v-4c0-4.1 2.5-6.5 6.2-6.5 1.8 0 3.3.1 3.8.2v4.3h-2.6c-2 0-2.4 1-2.4 2.4v3.1h4.8l-.6 5h-4.2v12H30c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.7 13.5L30.4 0h-2.8L17.5 11.7 9.4 0H0l12.2 17.8L0 32h2.8l10.7-12.4 8.6 12.4H32L18.7 13.5zm-3.8 4.4l-1.2-1.8L4.5 2.1h4.2l8 11.4 1.2 1.8 10.3 14.7h-4.2l-8.4-12z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2.9c4.3 0 4.8 0 6.5.1 1.6.1 2.4.3 3 .5.8.3 1.3.6 1.9 1.2.6.6.9 1.1 1.2 1.9.2.6.4 1.5.5 3 .1 1.7.1 2.2.1 6.5s0 4.8-.1 6.5c-.1 1.6-.3 2.4-.5 3-.3.8-.6 1.3-1.2 1.9-.6.6-1.1.9-1.9 1.2-.6.2-1.5.4-3 .5-1.7.1-2.2.1-6.5.1s-4.8 0-6.5-.1c-1.6-.1-2.4-.3-3-.5-.8-.3-1.3-.6-1.9-1.2-.6-.6-.9-1.1-1.2-1.9-.2-.6-.4-1.5-.5-3-.1-1.7-.1-2.2-.1-6.5s0-4.8.1-6.5c.1-1.6.3-2.4.5-3 .3-.8.6-1.3 1.2-1.9.6-.6 1.1-.9 1.9-1.2.6-.2 1.5-.4 3-.5 1.7-.1 2.2-.1 6.5-.1M16 0c-4.3 0-4.9 0-6.6.1-1.7.1-2.9.3-3.9.7-1 .4-1.9.9-2.8 1.8-.9.9-1.4 1.8-1.8 2.8-.4 1-.6 2.2-.7 3.9C0 11.1 0 11.7 0 16s0 4.9.1 6.6c.1 1.7.3 2.9.7 3.9.4 1 .9 1.9 1.8 2.8.9.9 1.8 1.4 2.8 1.8 1 .4 2.2.6 3.9.7 1.7.1 2.3.1 6.6.1s4.9 0 6.6-.1c1.7-.1 2.9-.3 3.9-.7 1-.4 1.9-.9 2.8-1.8.9-.9 1.4-1.8 1.8-2.8.4-1 .6-2.2.7-3.9.1-1.7.1-2.3.1-6.6s0-4.9-.1-6.6c-.1-1.7-.3-2.9-.7-3.9-.4-1-.9-1.9-1.8-2.8-.9-.9-1.8-1.4-2.8-1.8-1-.4-2.2-.6-3.9-.7C20.9 0 20.3 0 16 0zm0 7.8c-4.5 0-8.2 3.7-8.2 8.2s3.7 8.2 8.2 8.2 8.2-3.7 8.2-8.2-3.7-8.2-8.2-8.2zm0 13.5c-2.9 0-5.3-2.4-5.3-5.3s2.4-5.3 5.3-5.3 5.3 2.4 5.3 5.3-2.4 5.3-5.3 5.3zM26.5 7.5c0 1.1-.9 1.9-1.9 1.9-1.1 0-1.9-.9-1.9-1.9 0-1.1.9-1.9 1.9-1.9 1 0 1.9.8 1.9 1.9z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
