@@ -29,7 +29,6 @@ header .navegacion_principal{
     width: 40%;
     height: 100%;
     padding: 0px 10px;
-    background-color: blue;
 }
 
 header .login{
@@ -47,15 +46,39 @@ header .navegacion_principal ul{
 }
 
 header .navegacion_principal ul li{
-    font-size: 1.2em;
-    cursor: pointer;
     display: flex;
+    padding-bottom: 10px;
     align-items: center;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+header .navegacion_principal ul li:hover{
+    font-weight: bold;
+    border-bottom: 2px solid black;
 }
 
 header .navegacion_principal .nav-icon{
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-    background-color: #ff5a51;
+    width: 35px;
+    height: 35px;
+    margin-right: 3px;
 }
+
+.navegacion_principal .alojamiento-img{
+    background-image: url("Casa.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navegacion_principal .experiencias-img{
+    background-image: url("Globo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navegacion_principal .servicios-img{
+    background-image: url("Ring.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
