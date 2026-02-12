@@ -45,6 +45,15 @@ header .navegacion_principal ul{
     height: 100%;
 }
 
+header .login{
+    width: 30%;
+    height: 100%;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 header .navegacion_principal ul li{
     display: flex;
     padding-bottom: 10px;
@@ -82,3 +91,53 @@ header .navegacion_principal .nav-icon{
     background-repeat: no-repeat;
 }
 
+header .login-icon{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+
+header .login .login-bg-icon{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+header .login .login-bg-icon:hover{
+    width: 45px;
+    height: 45px;
+}
+
+header .login a{
+    display: inline-block;
+    width: 180px;
+    height: 30px;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 30px;
+}
+
+header .login a:hover{
+    background-color: gainsboro;
+    transition: all 0.5s ease;
+}
+
+header .login .globo-img{
+    background-image: url("mundo_globo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header .login .menu-img{
+    background-image: url("bars-solid-full.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
