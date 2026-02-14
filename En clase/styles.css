@@ -2,17 +2,20 @@
     margin: 0px;
     padding: 0px;
     border: 0px;
+    box-sizing: border-box;
 }
 
 body{
-    padding: 5px 20px;
-
+    padding: 0px 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 header{
     width: 100%;
-    height: 100px;   
+    height: 80px;
+    padding: 0px 20px;
     display: flex;
+    background-color: rgb(243, 243, 243);
 }
 
 header .titulo{
@@ -20,90 +23,85 @@ header .titulo{
     height: 100%;
     display: flex;
     align-items: center;
-    font-size: 2.5rem;
-    color: #ff5a51;
-
+    font-size: 2.2em;
+    color: #ff5a5f;
 }
 
-header .navegacion_principal{
+header .navegacion-principal{
     width: 40%;
     height: 100%;
-    padding: 0px 10px;
+    padding: 0px 5px;
 }
 
 header .login{
     width: 30%;
     height: 100%;
-    background-color: bisque;
+    display: flex;
+    margin-left: 10em;
+    align-items: center;
+    justify-content:space-around;
 }
 
-header .navegacion_principal ul{
+header .navegacion-principal ul{
     list-style: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100%;
 }
-
-header .login{
-    width: 30%;
-    height: 100%;
-    background-color: yellow;
+header .navegacion-principal ul li{
     display: flex;
+    padding-bottom: 7px;
     align-items: center;
-    justify-content: space-around;
-}
-
-header .navegacion_principal ul li{
-    display: flex;
-    padding-bottom: 10px;
-    align-items: center;
-    cursor: pointer;
     font-size: 1.2em;
+    cursor: pointer;
 }
 
-header .navegacion_principal ul li:hover{
-    font-weight: bold;
+header .navegacion-principal ul li:hover{
     border-bottom: 2px solid black;
+    font-weight: bold;
+    transition: border-bottom 0.2s ease;
 }
 
-header .navegacion_principal .nav-icon{
-    width: 35px;
+
+header .navegacion-principal .nav-icon{
+    display: inline-block;
     height: 35px;
+    width: 35px;
     margin-right: 3px;
 }
 
-.navegacion_principal .alojamiento-img{
-    background-image: url("Casa.png");
+header .navegacion-principal .alojamiento-img{
+    background-image: url(./img/NoAirBNBLogoCasa.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.navegacion_principal .experiencias-img{
-    background-image: url("Globo.png");
+header .navegacion-principal .experiencias-img{
+    background-image: url(./img/NoAirBNBLogoGlobo.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.navegacion_principal .servicios-img{
-    background-image: url("Ring.png");
+header .navegacion-principal .servicios-img{
+    background-image: url(./img/NoAirBNBLogoRing.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-header .login-icon{
+header .nav-icon{
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    height: 20px;
+    width: 20px;
 }
 
 header .login .login-bg-icon{
     display: flex;
     width: 40px;
     height: 40px;
+    background-color: rgb(232, 232, 232);
     align-items: center;
     justify-content: center;
-    background-color: gray;
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -112,32 +110,131 @@ header .login .login-bg-icon{
 header .login .login-bg-icon:hover{
     width: 45px;
     height: 45px;
+    background-color: rgb(226, 226, 226);
+}
+
+header .login-anfitrion{
+    text-decoration: none;
+    color: black;
 }
 
 header .login a{
-    display: inline-block;
+    display: flex;
+    height: 40px;
     width: 180px;
-    height: 30px;
-    text-decoration: none;
-    color: black;
-    border-radius: 20px;
     text-align: center;
-    line-height: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
 }
 
 header .login a:hover{
-    background-color: gainsboro;
+    background-color: rgb(232, 232, 232);
     transition: all 0.5s ease;
 }
 
 header .login .globo-img{
-    background-image: url("mundo_globo.png");
+    background-image: url('./img/global_icon.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 header .login .menu-img{
-    background-image: url("bars-solid-full.svg");
+    background-image: url('./img/menu_icon.png');
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+/*BARRA DE BUSQUEDA*/
+
+.buscador{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(243, 243, 243);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buscador .buscador-container{
+    width: 55%;
+    height: 60px;
+    padding: 0 7px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.buscador .buscador-input{
+    width: 20%;
+    height: 60%;
+    border-radius: 20px;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.buscador .buscador-input p{
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+
+.buscador .buscador-input input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    background-color: transparent;
+}
+
+.buscador .buscador-input:hover{
+    background-color: rgb(232, 232, 232);
+    
+}
+
+/*.busacdor .buscador-middle{
+    border-radius: 0px;
+    border-left: 1px solid rgb(239, 239, 239);
+    border-right: 1px solid rgb(239, 239, 239);
+}*/
+
+.buscador .buscador-middle::after{
+    content: "";
+    width: 0.5px;
+    height: 30px;
+    background-color: rgb(223, 223, 223);
+    left: 57%;
+    position: absolute;
+}
+
+.buscador .buscador-middle::before{
+    content: "";
+    width: 1px;
+    height: 30px;
+    background-color: rgb(223, 223, 223);
+    position: absolute;
+    left: 39%;
+}
+
+.buscador .buscador-button{
+    width: 50px;
+    height: 50px;
+    background-color: #ff5a5f;
+    border-radius: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-image: url(./img/images\(1\).png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
