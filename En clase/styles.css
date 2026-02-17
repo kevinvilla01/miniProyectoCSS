@@ -6,7 +6,7 @@
 }
 
 body{
-    padding: 0px 0px;
+    padding: 5px 0px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -15,7 +15,6 @@ header{
     height: 80px;
     padding: 0px 20px;
     display: flex;
-    background-color: rgb(243, 243, 243);
 }
 
 header .titulo{
@@ -23,32 +22,33 @@ header .titulo{
     height: 100%;
     display: flex;
     align-items: center;
-    font-size: 2.2em;
-    color: #ff5a5f;
+    font-size: 2.5em;
+    color:#FF5A5F;
 }
 
 header .navegacion-principal{
     width: 40%;
     height: 100%;
-    padding: 0px 5px;
+    padding: 0px 10px;
 }
 
 header .login{
     width: 30%;
     height: 100%;
     display: flex;
-    margin-left: 10em;
     align-items: center;
     justify-content:space-around;
 }
 
+
 header .navegacion-principal ul{
+    height: 100%;
     list-style: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100%;
 }
+
 header .navegacion-principal ul li{
     display: flex;
     padding-bottom: 7px;
@@ -58,111 +58,107 @@ header .navegacion-principal ul li{
 }
 
 header .navegacion-principal ul li:hover{
-    border-bottom: 2px solid black;
     font-weight: bold;
-    transition: border-bottom 0.2s ease;
+    border-bottom: 2px solid black;
 }
-
 
 header .navegacion-principal .nav-icon{
     display: inline-block;
-    height: 35px;
     width: 35px;
-    margin-right: 3px;
+    height: 35px;
+    margin-right: 8px;
 }
 
-header .navegacion-principal .alojamiento-img{
-    background-image: url(Globo.png);
+.navegacion-principal .alojamiento-img{
+    background-image: url('./img/icons/NoAirBNBLogoCasa.png');
     background-size: cover;
     background-repeat: no-repeat;
+    ;
 }
 
-header .navegacion-principal .experiencias-img{
-    background-image: url(Casa.png);
+.navegacion-principal .experiencias-img{
+    background-image: url('./img/icons/NoAirBNBLogoGlobo.png');
     background-size: cover;
     background-repeat: no-repeat;
+    ;
 }
 
-header .navegacion-principal .servicios-img{
-    background-image: url(Ring.png);
+.navegacion-principal .servicios-img{
+    background-image: url('./img/icons/NoAirBNBLogoRing.png');
     background-size: cover;
     background-repeat: no-repeat;
+    ;
 }
 
-header .nav-icon{
+header .login-icon{
     display: inline-block;
-    height: 20px;
-    width: 20px;
+    width: 25px;
+    height: 25px;
 }
 
 header .login .login-bg-icon{
     display: flex;
     width: 40px;
     height: 40px;
-    background-color: rgb(232, 232, 232);
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    background-color: rgb(198, 197, 197);
     cursor: pointer;
+    border-radius: 50%;
     transition: all 0.3s ease;
 }
 
 header .login .login-bg-icon:hover{
     width: 45px;
     height: 45px;
-    background-color: rgb(226, 226, 226);
-}
-
-header .login-anfitrion{
-    text-decoration: none;
-    color: black;
-}
-
-header .login a{
-    display: flex;
-    height: 40px;
-    width: 180px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.5s ease;
-}
-
-header .login a:hover{
-    background-color: rgb(232, 232, 232);
-    transition: all 0.5s ease;
 }
 
 header .login .globo-img{
-    background-image: url('mundo_globo.png');
+    background-image: url('./img/icons/globe.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 header .login .menu-img{
-    background-image: url('bars-solid-full.svg');
+    background-image: url('./img/icons/burger-bar.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-/*BARRA DE BUSQUEDA*/
+header .login a{
+    display: inline-block;
+    width: 180px;
+    height: 30px;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 30px;
+    background-color: white ;
+    transition: all 0.5s ease;
+}
+
+header .login a:hover{
+    background-color: rgb(198, 197, 197);
+    transition: all 0.5s ease;
+}
+
+/* BUSCADOR */
 
 .buscador{
     width: 100%;
     height: 80px;
-    background-color: rgb(243, 243, 243);
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(230, 230, 230);
 }
 
 .buscador .buscador-container{
-    width: 55%;
-    height: 60px;
-    padding: 0 7px;
-    border-radius: 30px;
+    width: 60%;
+    height: 50px;
+    padding: 0 5px;
+    border-radius: 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -171,102 +167,96 @@ header .login .menu-img{
 
 .buscador .buscador-input{
     width: 20%;
-    height: 60%;
+    height: 90%;
     border-radius: 20px;
     padding: 0px 20px;
+    font-size: 1.2em;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
-
 
 .buscador .buscador-input p{
     font-size: 0.8em;
     font-weight: bold;
 }
 
-
 .buscador .buscador-input input{
     width: 100%;
-    height: 40px;
+    height: 30px;
     border: none;
     outline: none;
     font-size: 0.9em;
-    background-color: transparent;
+    color: gray;
 }
 
-.buscador .buscador-input:hover{
-    background-color: rgb(232, 232, 232);
-    
-}
-
-/*.busacdor .buscador-middle{
+/* .buscador .buscador-middle{
     border-radius: 0px;
-    border-left: 1px solid rgb(239, 239, 239);
-    border-right: 1px solid rgb(239, 239, 239);
-}*/
+    border-left: 1px solid rgb(198, 197, 197);
+    border-right: 1px solid rgb(198, 197, 197);
+} */
 
 .buscador .buscador-middle::after{
     content: "";
-    width: 0.5px;
+    width: 1.5px;
     height: 30px;
-    background-color: rgb(223, 223, 223);
-    left: 57%;
+    background-color: rgb(198, 197, 197);
     position: absolute;
+    left: 58%;
+    
 }
 
 .buscador .buscador-middle::before{
     content: "";
-    width: 1px;
+    width: 1.5px;
     height: 30px;
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(198, 197, 197);
     position: absolute;
     left: 39%;
+    
 }
 
 .buscador .buscador-button{
-    width: 50px;
-    height: 50px;
-    background-color: #ff5a5f;
-    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #FF5A5F;
+    border-radius: 50%;
     font-size: 1.2em;
     cursor: pointer;
     transition: all 0.3s ease;
-    background-image: url(mundo_globo.png);
-    background-size: 2em;
+    background-image: url('./img/icons/zoom-lens.png');
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
 }
 
+/* RESULTADOS */
+
 .resultados{
-    height: auto;
     width: 100%;
+    height: auto;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
-    padding: 0px 20px;
     align-items: center;
     justify-content: center;
-    background-color: aquamarine;
 }
 
-.resultados .resultados-section{
+.resultados .resultados-seccion{
     width: 100%;
     height: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #ff5a5f;
 }
 
-.resultados .resultados-section h2{
+.resultados .resultados-seccion h2{
     height: 30px;
     padding-top: 5px;
     font-size: 1em;
     align-self: flex-start;
     justify-self: center;
-    background-color: aqua;
 }
 
 .resultados .resultados-lista{
@@ -276,17 +266,43 @@ header .login .menu-img{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: bisque;
 }
 
 .resultados .resultados-lista .resultado{
-    width: 300px;
-    height: 270px;
-    background-color: blue;
-    margin: 0 10px;
+    width: 200px;
+    height: 260px;
+    background-color: white;
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.resultados .resultados-lista .resultado .sittio-descripcion{
+.resultados .resultados-lista .resultado .sitio-thumbnail{
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    background-image: url('./img/thumbnails/Casa01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.resultados .resultados-lista .resultado .sitio-mensaje{
+    width: 120px;
+    height: 40px;
+    padding-left: 8px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    left: 10px;
+    top: 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.resultados .resultados-lista .resultado .sitio-descripcion{
     width: 100%;
     height: 50px;
     padding: 0px 10px;
@@ -295,6 +311,17 @@ header .login .menu-img{
     justify-content: center;
 }
 
-.resultados .resultados-lista .resultado .sittio-descripcion h2{
-    
+.resultados .resultados-lista .resultado .sitio-descripcion h4{
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.resultados .resultados-lista .resultado .sitio-descripcion .sitio-fechas{
+    font-size: 0.7em;
+    color: gray;
+}
+
+.resultados .resultados-lista .resultado .sitio-descripcion .sitio-precio{
+    font-size: 0.7em;
+    color: gray;
 }
