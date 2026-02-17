@@ -70,21 +70,21 @@ header .navegacion-principal .nav-icon{
 }
 
 .navegacion-principal .alojamiento-img{
-    background-image: url('./img/icons/NoAirBNBLogoCasa.png');
+    background-image: url('Casa.png');
     background-size: cover;
     background-repeat: no-repeat;
     ;
 }
 
 .navegacion-principal .experiencias-img{
-    background-image: url('./img/icons/NoAirBNBLogoGlobo.png');
+    background-image: url('Globo.png');
     background-size: cover;
     background-repeat: no-repeat;
     ;
 }
 
 .navegacion-principal .servicios-img{
-    background-image: url('./img/icons/NoAirBNBLogoRing.png');
+    background-image: url('Ring.png');
     background-size: cover;
     background-repeat: no-repeat;
     ;
@@ -114,13 +114,13 @@ header .login .login-bg-icon:hover{
 }
 
 header .login .globo-img{
-    background-image: url('./img/icons/globe.png');
+    background-image: url('mundo_globo.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 header .login .menu-img{
-    background-image: url('./img/icons/burger-bar.png');
+    background-image: url('bars-solid-full.svg');
     background-size: cover;
     background-repeat: no-repeat;
 }
