@@ -6,7 +6,7 @@
 }
 
 body{
-    padding: 5px 0px;
+    padding: 0px 0px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -15,6 +15,7 @@ header{
     height: 80px;
     padding: 0px 20px;
     display: flex;
+    background-color: rgb(229, 229, 229);
 }
 
 header .titulo{
@@ -23,7 +24,7 @@ header .titulo{
     display: flex;
     align-items: center;
     font-size: 2.5em;
-    color:#FF5A5F;
+    color: #FF5A5F
 }
 
 header .navegacion-principal{
@@ -37,9 +38,8 @@ header .login{
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content: space-around;
 }
-
 
 header .navegacion-principal ul{
     height: 100%;
@@ -60,6 +60,7 @@ header .navegacion-principal ul li{
 header .navegacion-principal ul li:hover{
     font-weight: bold;
     border-bottom: 2px solid black;
+    transition: border-bottom 0.1s ease;
 }
 
 header .navegacion-principal .nav-icon{
@@ -70,24 +71,21 @@ header .navegacion-principal .nav-icon{
 }
 
 .navegacion-principal .alojamiento-img{
-    background-image: url('Casa.png');
+    background-image: url(img/icons/NoAirBNBLogoCasa.png);
     background-size: cover;
     background-repeat: no-repeat;
-    ;
 }
 
 .navegacion-principal .experiencias-img{
-    background-image: url('Globo.png');
+    background-image: url(img/icons/NoAirBNBLogoGlobo.png);
     background-size: cover;
     background-repeat: no-repeat;
-    ;
 }
 
 .navegacion-principal .servicios-img{
-    background-image: url('Ring.png');
+    background-image: url(img/icons/NoAirBNBLogoRing.png);
     background-size: cover;
     background-repeat: no-repeat;
-    ;
 }
 
 header .login-icon{
@@ -102,27 +100,10 @@ header .login .login-bg-icon{
     height: 40px;
     align-items: center;
     justify-content: center;
-    background-color: rgb(198, 197, 197);
-    cursor: pointer;
+    background-color: grey;
     border-radius: 50%;
+    cursor: pointer;
     transition: all 0.3s ease;
-}
-
-header .login .login-bg-icon:hover{
-    width: 45px;
-    height: 45px;
-}
-
-header .login .globo-img{
-    background-image: url('mundo_globo.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-header .login .menu-img{
-    background-image: url('bars-solid-full.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 header .login a{
@@ -131,16 +112,33 @@ header .login a{
     height: 30px;
     text-decoration: none;
     color: black;
-    border-radius: 20px;
     text-align: center;
+    border-radius: 20px;
+    background-color: white;
     line-height: 30px;
-    background-color: white ;
     transition: all 0.5s ease;
 }
 
 header .login a:hover{
     background-color: rgb(198, 197, 197);
     transition: all 0.5s ease;
+}
+
+header .login .login-bg-icon:hover{
+    width: 45px;
+    height: 45px;
+}
+
+header .login .globo-img{
+    background-image: url(img/icons/globo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header .login .menu-img{
+    background-image: url(img/icons/menu.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* BUSCADOR */
@@ -151,7 +149,7 @@ header .login a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(229, 229, 229);
 }
 
 .buscador .buscador-container{
@@ -201,9 +199,8 @@ header .login a:hover{
     width: 1.5px;
     height: 30px;
     background-color: rgb(198, 197, 197);
-    position: absolute;
     left: 58%;
-    
+    position: absolute;
 }
 
 .buscador .buscador-middle::before{
@@ -213,7 +210,6 @@ header .login a:hover{
     background-color: rgb(198, 197, 197);
     position: absolute;
     left: 39%;
-    
 }
 
 .buscador .buscador-button{
@@ -224,7 +220,7 @@ header .login a:hover{
     font-size: 1.2em;
     cursor: pointer;
     transition: all 0.3s ease;
-    background-image: url('./img/icons/zoom-lens.png');
+    background-image: url(img/icons/lupa.png);
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
@@ -235,7 +231,7 @@ header .login a:hover{
 .resultados{
     width: 100%;
     height: auto;
-    padding: 0 20px;
+    padding: 0px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -283,7 +279,7 @@ header .login a:hover{
     width: 180px;
     height: 180px;
     border-radius: 20px;
-    background-image: url('./img/thumbnails/Casa01.jpg');
+    background-image: url(img/thumbnails/Casa01.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -316,7 +312,7 @@ header .login a:hover{
     font-weight: bold;
 }
 
-.resultados .resultados-lista .resultado .sitio-descripcion .sitio-fechas{
+.resultados .resultados-lista .resultado .sitio-descripcion .sitio-fecha{
     font-size: 0.7em;
     color: gray;
 }
@@ -324,4 +320,136 @@ header .login a:hover{
 .resultados .resultados-lista .resultado .sitio-descripcion .sitio-precio{
     font-size: 0.7em;
     color: gray;
+}
+
+.sugerencia{
+    width: 100%;
+    height: auto;
+    padding: 0px 20px;
+    margin-top: 25px;
+}
+
+.sugerencias nav{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgb(160, 160, 160, 0.8);
+}
+
+.sugerencias nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.sugerencias nav ul li{
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.sugerencias nav ul li:hover{
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+.sugerencias .sugerencias-lista{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.sugerencias .sugerencias-lista .sugerencia{
+    width: 180px;
+    height: 70px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.referencias{
+    width: 100%;
+    height: auto;
+    padding: 0px 20px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.referencias div{
+    width: 33%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.referencias div h4{
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.referencias div ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.referencias div ul li{
+    margin-bottom: 10px;
+}
+
+.referencias div ul li a{
+    text-decoration: none;
+    color: gray;
+    font-size: 0.9em;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .derechos{
+    width: 50%;
+    height: 100%;
+}
+
+footer .derechos ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+footer .derechos ul li{
+    margin-right: 20px;
+}
+
+footer .derechos ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 0.9em;
 }
